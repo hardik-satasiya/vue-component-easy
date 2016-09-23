@@ -1,0 +1,30 @@
+{% set pageTitle = "Homepage" %}
+{% set pageName = "index" %}
+{% extends "sections/_main-layout.html" %}
+
+{% block content %}
+	<!-- page content here -->
+	<div id="parent-vue-app" class="main class">
+		<div class="hero">
+			test [[ $data | json ]]
+		</div>
+
+		<br/>
+		<br/>
+		<br/>
+		<test></test>
+		<comp-app inline-template>
+			<div class="hero">
+				Time : [[ $data | json ]]
+				<br/>
+				<button>
+					Update Time
+				</button>
+			</div>
+		</comp-app>
+	</div>
+
+{% endblock %}
+
+{% block before_head_end %}
+{% endblock %}
